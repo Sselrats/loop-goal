@@ -34,6 +34,7 @@ Do not invent optional inputs. If a choice is not constrained by the North Star 
 Create these files in the target repository:
 
 ```text
+README.md
 docs/northstar.md
 docs/architecture.md
 docs/implementation-plan.md
@@ -67,32 +68,37 @@ Additional files may be created only when needed to represent the actual target 
    - `docs/safety.md` captures constraints and safety rules specific to the target project.
    - `docs/completion-criteria.md` captures what must be true before the long-running goal can be declared complete.
 
-4. Populate `goal.md`.
+4. Populate `README.md`.
+   - Explain what the project is, using the attached North Star document as the source of product intent.
+   - Explain where the North Star documents live.
+   - Explain how to start or continue the goal loop.
+   - Explain where progress is recorded.
+   - Explain how completion is judged.
+
+5. Populate `goal.md`.
    - Convert the documented North Star into a long-running convergence policy.
    - Make clear that the goal is not complete after one cycle.
    - Make clear that `next_goal.md` is only a pointer to the next checkpoint.
 
-5. Populate `next_goal.md`.
-   - Select the first concrete checkpoint.
+6. Populate `next_goal.md`.
+   - Select the first smallest verifiable implementation checkpoint.
    - Keep it small enough to complete, verify, log, and commit.
    - Tie it directly to the documented North Star.
 
-6. Populate `WORK_LOG.md`.
+7. Populate `WORK_LOG.md`.
    - Record bootstrap date, source inputs, initial assumptions, unresolved questions, and the first planned checkpoint.
    - Leave space for append-only execution entries.
 
-7. Commit the bootstrap.
+8. Commit the bootstrap.
    - Use git as the checkpoint mechanism.
    - Commit after the target repository has coherent control files.
    - The commit should describe initialization, not product completion.
 
-8. Begin the loop.
-   - Execute `next_goal.md`.
-   - Verify results.
-   - Update `WORK_LOG.md`.
-   - Update `next_goal.md`.
-   - Commit.
-   - Continue until `docs/completion-criteria.md` is satisfied.
+9. Stop after bootstrap unless explicitly instructed to start the goal loop.
+   - During bootstrap, initialize the control structure only.
+   - Do not start product implementation unless the user explicitly asks to start the goal loop.
+   - After bootstrap, `next_goal.md` should contain the first smallest verifiable implementation checkpoint.
+   - Actual implementation should begin through `prompts/start_goal.md` or an explicit user instruction.
 
 ## Bootstrap Output Requirements
 

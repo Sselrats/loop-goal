@@ -52,6 +52,7 @@ Commits are not completion claims unless they explicitly satisfy the documented 
 Each implementation cycle should follow this sequence:
 
 1. Read the control files.
+   - Read `README.md`.
    - Read `docs/*.md`.
    - Read `goal.md`.
    - Read `next_goal.md`.
@@ -87,8 +88,24 @@ Each implementation cycle should follow this sequence:
    - The commit message should describe the actual checkpoint.
 
 8. Continue or stop intentionally.
-   - Continue if the environment and user request support continued work.
-   - Stop only after leaving `WORK_LOG.md` and `next_goal.md` in a recoverable state.
+   - Completing one cycle is not a valid stop reason.
+   - Completing `next_goal.md` is not a valid stop reason.
+   - If the Completion Criteria are not satisfied and no Stop Condition is reached, immediately continue to the next cycle.
+   - Stop only when a Stop Condition is reached.
+   - Before stopping, leave `WORK_LOG.md` and `next_goal.md` in a recoverable state.
+
+## Stop Conditions
+
+The agent may stop only when one of the following is true:
+
+1. The Completion Criteria in `docs/completion-criteria.md` are satisfied with evidence.
+2. Safety rules prevent further progress.
+3. Human input is required, such as API keys, account creation, paid service setup, infrastructure permissions, legal/compliance decisions, or product direction decisions.
+4. Verification repeatedly fails and conservative judgment requires human review.
+5. Execution budget, time, permission, sandbox, or tool limits are reached.
+
+Completing one cycle is not a Stop Condition.
+Completing `next_goal.md` is not a Stop Condition.
 
 ## Completion Rule
 

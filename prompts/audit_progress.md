@@ -7,6 +7,7 @@ Audit this repository against its documented North Star.
 
 Read:
 
+- README.md
 - docs/northstar.md
 - docs/architecture.md
 - docs/implementation-plan.md

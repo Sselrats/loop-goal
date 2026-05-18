@@ -12,6 +12,7 @@ The repository needs a documented North Star, a durable convergence policy, pers
 
 This checkpoint includes:
 
+- Create or update `README.md`.
 - Create or update `docs/northstar.md`.
 - Create or update `docs/architecture.md`.
 - Create or update `docs/implementation-plan.md`.
@@ -31,6 +32,7 @@ This checkpoint includes:
 ## Verification
 
 - Confirm all control files exist.
+- Confirm `README.md` explains what the project is, where the North Star documents live, how to start or continue the goal loop, where progress is recorded, and how completion is judged.
 - Confirm all documented content is grounded in the attached North Star document or explicitly marked as an assumption.
 - Confirm no implementation language or framework has been forced without source justification.
 - Confirm `next_goal.md` points to a concrete next checkpoint.

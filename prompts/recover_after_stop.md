@@ -7,6 +7,7 @@ Recover the North Star driven implementation loop after a stop.
 
 Read these files first:
 
+- README.md
 - WORK_LOG.md
 - next_goal.md
 - goal.md

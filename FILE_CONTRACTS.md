@@ -2,6 +2,22 @@
 
 This document defines the responsibilities and mutation rules for the files used by the goal loop in a target repository.
 
+## `README.md`
+
+The target repository `README.md` is the entry point for humans and agents.
+
+Purpose:
+
+- Explain what the project is, based on the attached North Star document.
+- Explain where the North Star documents live.
+- Explain how to start or continue the goal loop.
+- Explain where progress is recorded.
+- Explain how completion is judged.
+
+Mutation rule:
+
+- Update when the documented project identity, operating instructions, progress tracking location, or completion process changes.
+
 ## `docs/*.md`
 
 The `docs` directory is the documented North Star.

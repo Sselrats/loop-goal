@@ -54,10 +54,10 @@ When the target repository is empty, the agent should:
 1. Read this repository as a reference.
 2. Read the attached North Star document supplied by the user.
 3. Create the target repository's `docs/*.md` files from the attached North Star document.
-4. Create `goal.md`, `next_goal.md`, and `WORK_LOG.md` in the target repository.
+4. Create `README.md`, `goal.md`, `next_goal.md`, and `WORK_LOG.md` in the target repository.
 5. Preserve the separation between documented intent, long-running policy, next execution checkpoint, and execution memory.
 6. Make the first checkpoint commit.
-7. Continue the implementation loop until the North Star Completion Criteria are satisfied.
+7. Start implementation only when explicitly instructed, then continue the implementation loop until the North Star Completion Criteria are satisfied or a valid Stop Condition is reached.
 
 ## Repository Contents
 

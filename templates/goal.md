@@ -30,7 +30,35 @@ For each cycle:
 5. Append an entry to `WORK_LOG.md`.
 6. Update `next_goal.md` to the next concrete checkpoint.
 7. Commit the checkpoint.
-8. Continue unless the Completion Criteria are satisfied or the user instructs otherwise.
+8. Continue unless the Completion Criteria are satisfied or a valid Stop Condition is reached.
+
+## Stop Conditions
+
+Stop only if one of the following is true:
+
+1. `docs/completion-criteria.md` is satisfied with evidence.
+2. Safety rules prevent further progress.
+3. Human input is required.
+4. Verification repeatedly fails and human review is needed.
+5. Execution budget, time, permission, sandbox, or tool limits are reached.
+
+Completing one cycle is not a Stop Condition.
+Completing `next_goal.md` is not a Stop Condition.
+
+## Required report only when stopping
+
+- Current state:
+- Last selected task:
+- Reason for selection:
+- Before:
+- After:
+- Changed files:
+- Verification executed:
+- Verification result:
+- Remaining issues:
+- `next_goal.md` update:
+- Commit hash:
+- Reason for stopping:
 
 ## Decision Policy
 
