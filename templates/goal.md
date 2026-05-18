@@ -23,7 +23,7 @@ The documented North Star lives in `docs/*.md`. The goal of the loop is to conve
 
 For each cycle:
 
-1. Read `docs/*.md`, `goal.md`, `next_goal.md`, and recent `WORK_LOG.md` entries.
+1. Read `README.md`, `docs/*.md`, `goal.md`, `next_goal.md`, and recent `WORK_LOG.md` entries.
 2. Inspect repository state and git status.
 3. Implement the checkpoint described in `next_goal.md`.
 4. Verify the work with the most relevant available checks.
